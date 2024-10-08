@@ -1,11 +1,11 @@
 import NavBar from "./components/NavBar/NavBar";
-import Movies from "./components/Movies";
+import Main from "./components/Main/Main";
 
 export default function App() {
   return (
     <>
       <NavBar />
-      <Movies />
+      <Main />
     </>
   );
 }

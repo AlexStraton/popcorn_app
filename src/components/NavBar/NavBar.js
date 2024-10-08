@@ -1,5 +1,5 @@
 import Logo from "./Logo";
-import NumberOfResults from "./NumberOfResults";
+import NumOfResults from "./NumOfResults";
 import SearchBar from "./SearchBar";
 
 export default function NavBar() {
@@ -7,7 +7,7 @@ export default function NavBar() {
     <nav className='nav-bar'>
       <Logo />
       <SearchBar />
-      <NumberOfResults />
+      <NumOfResults />
     </nav>
   );
 }

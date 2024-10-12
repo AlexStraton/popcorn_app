@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Movies({ children }) {
+export default function Movies({ element }) {
   const [isOpen, setIsOpen] = useState(true);
 
   return (
@@ -8,7 +8,7 @@ export default function Movies({ children }) {
       <button className='btn-toggle' onClick={() => setIsOpen((open) => !open)}>
         {isOpen ? "–" : "+"}
       </button>
-      {isOpen && children}
+      {isOpen && element}
     </div>
   );
 }

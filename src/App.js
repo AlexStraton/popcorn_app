@@ -65,13 +65,16 @@ export default function App() {
         <NumOfResults movies={movies} />
       </NavBar>
       <Main>
-        <Container>
-          <MovieList movies={movies} />
-        </Container>
-        <Container>
-          <WatchedSummary watched={watched} />
-          <WatchedMovies watched={watched} />
-        </Container>
+        <Container element={<MovieList movies={movies} />} />
+
+        <Container
+          element={
+            <>
+              {" "}
+              <WatchedSummary watched={watched} />
+              <WatchedMovies watched={watched} />{" "}
+            </>
+          }></Container>
       </Main>
     </>
   );

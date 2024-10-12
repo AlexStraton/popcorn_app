@@ -1,7 +1,7 @@
 import { useState } from "react";
 import MovieList from "./MovieList";
 
-export default function Movies() {
+export default function Movies({ movies }) {
   const [isOpen1, setIsOpen1] = useState(true);
 
   return (
@@ -11,7 +11,7 @@ export default function Movies() {
         onClick={() => setIsOpen1((open) => !open)}>
         {isOpen1 ? "–" : "+"}
       </button>
-      {isOpen1 && <MovieList />}
+      {isOpen1 && <MovieList movies={movies} />}
     </div>
   );
 }

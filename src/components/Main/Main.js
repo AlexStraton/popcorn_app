@@ -1,5 +1,5 @@
-import Movies from "./MoviesList";
-import WatchedMoviesList from "./WatchedMoviesList";
+import Movies from "./Movies_List/Movies";
+import WatchedMoviesList from "./Watched_Movies/WatchedMoviesList";
 
 export default function Main() {
   return (

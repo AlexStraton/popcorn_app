@@ -3,13 +3,16 @@ import { useState } from "react";
 export default function StarRating({ maxRating = 5 }) {
   const [rating, setRating] = useState(0);
 
+  function handleRating(rating) {
+    setRating(rating);
+  }
   return (
     <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
       <div style={{ display: "flex" }}>
         {Array.from({ length: maxRating }, (_, i) => (
           <Star
             full={rating >= i + 1}
-            onClick={() => setRating(i + 1)}
+            onClick={() => handleRating(i + 1)}
             key={i}
           />
         ))}
@@ -24,6 +27,8 @@ function Star({ onClick, full }) {
     <>
       {full ? (
         <span
+          onClick={onClick}
+          role='button'
           style={{
             width: "48px",
             cursor: "pointer",
